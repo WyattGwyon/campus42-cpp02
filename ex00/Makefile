@@ -6,18 +6,21 @@
 #    By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/14 14:34:58 by clouden           #+#    #+#              #
-#    Updated: 2026/05/16 15:37:36 by clouden          ###   ########.fr        #
+#    Updated: 2026/05/18 19:31:43 by clouden          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX			=	c++
+
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME		=	fixed
-SRCS		=	main.cpp\
+
+SRCS		=	main.cpp \
 				Fixed.cpp
 
-OBJS		=	$(SRCS: %.cpp=%.o)
+OBJS		=	$(SRCS:.cpp=.o)
+
 INCL		=	Fixed.hpp
 
 all: $(NAME)
