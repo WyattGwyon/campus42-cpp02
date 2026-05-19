@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/16 16:05:52 by clouden           #+#    #+#             */
-/*   Updated: 2026/05/19 22:20:55 by clouden          ###   ########.fr       */
+/*   Created: 2026/05/19 19:19:31 by clouden           #+#    #+#             */
+/*   Updated: 2026/05/19 22:40:37 by clouden          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,24 @@ public:
 	~Fixed(void);
 
 	Fixed	&operator=(const Fixed& fixed);
-	
+//	Fixed	&operator<();
+//	Fixed	&operator>();
+//	Fixed	&operator>=();
+//	Fixed	&operator<=();
+//	Fixed	&operator==();
+//	Fixed	&operator!=();
+
 	int		getRawBits(void) const;
 	void	setRawBits(const int raw);
 	int		toInt(void) const;
 	float	toFloat(void) const;
+
+//	Fixed&	static min(Fixed& f1, Fixed& f2);
+//	Fixed&	static min(const Fixed& f1, const Fixed& f2);
+//	Fixed&	static max(Fixed& f1, Fixed& f2);
+//	Fixed&	static max(constFixed& f1, const Fixed& f2);
 };
 
-std::ostream& operator<<(std::ostream& out, const Fixed& fixed);
+std::ostream&	operator<<(std::cout out, const Fixed& fixed);
 
 #endif
-
