@@ -6,7 +6,7 @@
 #    By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/19 19:09:12 by clouden           #+#    #+#              #
-#    Updated: 2026/05/19 19:18:56 by clouden          ###   ########.fr        #
+#    Updated: 2026/05/19 22:42:58 by clouden          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,4 +37,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY all clean fclean re
+.PHONY: all clean fclean re

@@ -6,7 +6,7 @@
 /*   By: clouden <clouden@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 19:19:31 by clouden           #+#    #+#             */
-/*   Updated: 2026/05/19 22:40:37 by clouden          ###   ########.fr       */
+/*   Updated: 2026/05/20 20:12:49 by clouden          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,32 @@ public:
 	~Fixed(void);
 
 	Fixed	&operator=(const Fixed& fixed);
-//	Fixed	&operator<();
-//	Fixed	&operator>();
-//	Fixed	&operator>=();
-//	Fixed	&operator<=();
-//	Fixed	&operator==();
-//	Fixed	&operator!=();
+	bool	operator<(const Fixed& fixed) const;
+	bool	operator>(const Fixed& fixed) const;
+	bool	operator>=(const Fixed& fixed) const;
+	bool	operator<=(const Fixed& fixed) const;
+	bool	operator==(const Fixed& fixed) const;
+	bool	operator!=(const Fixed& fixed) const;
+	float	operator+(const Fixed& fixed) const;
+	float	operator-(const Fixed& fixed) const;
+	float	operator*(const Fixed& fixed) const;
+	float	operator/(const Fixed& fixed) const;
+	Fixed	operator++();
+	Fixed	operator++(int);
+	Fixed	operator--();
+	Fixed	operator--(int);
 
 	int		getRawBits(void) const;
 	void	setRawBits(const int raw);
 	int		toInt(void) const;
 	float	toFloat(void) const;
 
-//	Fixed&	static min(Fixed& f1, Fixed& f2);
-//	Fixed&	static min(const Fixed& f1, const Fixed& f2);
-//	Fixed&	static max(Fixed& f1, Fixed& f2);
-//	Fixed&	static max(constFixed& f1, const Fixed& f2);
+	static Fixed&		min(Fixed& f1, Fixed& f2);
+	static const Fixed&	min(const Fixed& f1, const Fixed& f2);
+	static Fixed&		max(Fixed& f1, Fixed& f2);
+	static const Fixed&	max(const Fixed& f1, const Fixed& f2);
 };
 
-std::ostream&	operator<<(std::cout out, const Fixed& fixed);
+std::ostream&	operator<<(std::ostream& out, const Fixed& fixed);
 
 #endif
